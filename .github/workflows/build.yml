@@ -43,7 +43,7 @@ jobs:
         pyinstaller mc_layerifier.spec
 
     - name: Upload artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ${{ matrix.asset_name }}
         path: dist/${{ matrix.artifact_name }}
