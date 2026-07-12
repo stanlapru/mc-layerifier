@@ -1,22 +1,11 @@
-# PyInstaller spec for packaging Minecraft Layerifier.
-# Build with: pyinstaller minecraft_layerifier.spec
-
-from pathlib import Path
-
-
 block_cipher = None
-root = Path.cwd()
 
 a = Analysis(
-    ["minecraft_layerifier.py"],
-    pathex=[str(root)],
+    ['your_main_script.py'],
+    pathex=[],
     binaries=[],
-    datas=[
-        (str(root / "localizations"), "localizations"),
-        (str(root / "textures"), "textures"),
-        (str(root / "README.md"), "."),
-    ],
-    hiddenimports=["nbtlib", "numpy", "PIL._tkinter_finder"],
+    datas=[],
+    hiddenimports=[],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
@@ -36,14 +25,14 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name="MinecraftLayerifier",
+    name='myapp',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
     upx=True,
     upx_exclude=[],
     runtime_tmpdir=None,
-    console=False,
+    console=True,
     disable_windowed_traceback=False,
     argv_emulation=False,
     target_arch=None,
