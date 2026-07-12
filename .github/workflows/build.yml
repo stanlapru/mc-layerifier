@@ -38,9 +38,19 @@ jobs:
         pip install pyinstaller
         pip install -r requirements.txt
 
+    - name: Clear PyInstaller cache
+      run: |
+        # Remove PyInstaller cache
+        if (Test-Path "build") { Remove-Item -Recurse -Force build }
+        if (Test-Path "dist") { Remove-Item -Recurse -Force dist }
+        if (Test-Path "*.spec") { Remove-Item -Recurse -Force *.spec }
+        # Also clear Python cache
+        Get-ChildItem -Recurse -Directory -Filter "__pycache__" | Remove-Item -Recurse -Force
+      shell: pwsh
+
     - name: Build with PyInstaller
       run: |
-        pyinstaller mc_layerifier.spec
+        pyinstaller --onefile --name mc-layerifier minecraft_layerifier.py
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
