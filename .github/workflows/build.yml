@@ -13,15 +13,15 @@ jobs:
     strategy:
       matrix:
         include:
-          - os: ubuntu-latest
-            artifact_name: mc-layerifier
-            asset_name: myapp-linux
+        #   - os: ubuntu-latest
+        #     artifact_name: mc-layerifier
+        #     asset_name: mc-layerifier-linux
           - os: windows-latest
             artifact_name: mc-layerifier.exe
-            asset_name: myapp-windows.exe
-          - os: macos-latest
-            artifact_name: myapp
-            asset_name: mc-layerifier-macos
+            asset_name: mc-layerifier-windows.exe
+        #   - os: macos-latest
+        #     artifact_name: myapp
+        #     asset_name: mc-layerifier-macos
 
     steps:
     - name: Checkout code
