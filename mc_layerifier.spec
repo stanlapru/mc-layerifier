@@ -1,7 +1,7 @@
 block_cipher = None
 
 a = Analysis(
-    ['your_main_script.py'],
+    ['minecraft_layerifier.py'],
     pathex=[],
     binaries=[],
     datas=[],
@@ -25,7 +25,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='myapp',
+    name='mc-layerifier',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
