@@ -1,9 +1,11 @@
 # Minecraft Layerifier
 
+A desktop GUI tool for viewing player-built Minecraft Java Edition structures one layer at a time.
+
+![Preview](preview.png)
+
 > [!NOTE]  
 > I suggest putting the Layerifier executable in a separate folder, as the program will create config files, localizations and PNG exports in its folder.
-
-A desktop GUI tool for viewing player-built Minecraft Java Edition structures one layer at a time.
 
 ## Setup
 
