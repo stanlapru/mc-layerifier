@@ -20,7 +20,7 @@ jobs:
             artifact_name: mc-layerifier.exe
             asset_name: mc-layerifier-windows.exe
         #   - os: macos-latest
-        #     artifact_name: myapp
+        #     artifact_name: mc-layerifier
         #     asset_name: mc-layerifier-macos
 
     steps:
