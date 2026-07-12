@@ -1,0 +1,6 @@
+exports/
+config/
+__pycache__/
+*.pyc
+textures/
+!textures/README.md
